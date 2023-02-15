@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Idea lets gooooo</title>
+</head>
+<body>
+	<input type="text" id="cajaadecriptar"></input>
+	<button id="botondecriptar" onclick="encriptar()">Encriptar</button>
+	<p id="textoresultado"></p>
+	<script>
+		var textoresultado = document.getElementById("textoresultado");
+
+function encriptar()
+{
+	var textoadecriptar = document.getElementById("cajaadecriptar").value;
+	var textoseparado = textoadecriptar.split("");
+	console.log(textoseparado)
+	var stringnuevo = "";
+	for(i = 0; i < textoseparado.length; i++)
+	{
+		let wachina = textoseparado[i];
+		switch (wachina.toLowerCase())
+		{
+			case "a":
+				stringnuevo += "z"
+			break;
+			case "b":
+				stringnuevo += "y"
+			break;
+			case "c":
+				stringnuevo += "x"
+			break;
+			case "d":
+				stringnuevo += "w"
+			break;
+			case "e":
+				stringnuevo += "v"
+			break;
+			case "f":
+				stringnuevo += "u"
+			break;
+			case "g":
+				stringnuevo += "t"
+			break;
+			case "h":
+				stringnuevo += "s"
+			break;
+			case "i":
+				stringnuevo += "r"
+			break;
+			case "j":
+				stringnuevo += "q"
+			break;
+			case "k":
+				stringnuevo += "p"
+			break;
+			case "l":
+				stringnuevo += "o"
+			break;
+			case "m":
+				stringnuevo += "ñ"
+			break;
+			case "n":
+				stringnuevo += "n"
+			break;
+			case "ñ":
+				stringnuevo += "m"
+			break;
+			case "o":
+				stringnuevo += "l"
+			break;
+			case "p":
+				stringnuevo += "k"
+			break;
+			case "q":
+				stringnuevo += "j"
+			break;
+			case "r":
+				stringnuevo += "i"
+			break;
+			case "s":
+				stringnuevo += "h"
+			break;
+			case "t":
+				stringnuevo += "g"
+			break;
+			case "u":
+				stringnuevo += "f"
+			break;
+			case "v":
+				stringnuevo += "e"
+			break;
+			case "w":
+				stringnuevo += "d"
+			break;
+			case "x":
+				stringnuevo += "c"
+			break;
+			case "y":
+				stringnuevo += "b"
+			break;
+			case "z":
+				stringnuevo += "a"
+			break;
+			case " ":
+				stringnuevo += " ";
+			break;
+			case "1":
+				stringnuevo += "0";
+			break;
+			case "2":
+				stringnuevo += "9";
+			break;
+			case "3":
+				stringnuevo += "8";
+			break;
+			case "4":
+				stringnuevo += "7";
+			break;
+			case "5":
+				stringnuevo += "6";
+			break;
+			case "6":
+				stringnuevo += "5";
+			break;
+			case "7":
+				stringnuevo += "4";
+			break;
+			case "8":
+				stringnuevo += "3";
+			break;
+			case "9":
+				stringnuevo += "2";
+			break;
+			case "0":
+				stringnuevo += "1";
+			break;
+		}
+	}
+	textoresultado.innerText = stringnuevo;
+}
+	</script>
+</body>
+</html>

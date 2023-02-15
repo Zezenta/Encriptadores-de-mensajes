@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>Hecho Por José Miguel</title>
+</head>
+<body>
+	<style>
+
+
+		.content {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+		}
+
+		p{
+			position:absolute;
+			bottom:15%;
+			top: 40%;
+			text-align: center;
+			right: 20%;
+  			width: 60%;
+		}
+		#informacion{
+			position: absolute;
+			top: 0%;
+			right: 0;
+		}
+		
+	</style>
+	<button id="informacion" onclick="mostrarinfo()">Información</button>
+	<div class="content">
+	<input type="text" id="cajaadecriptar"></input>
+	<button id="botondecriptar" onclick="encriptar()">Encriptar</button>
+	</div>
+	<p id="textoresultado"></p>
+	<script>
+		function mostrarinfo()
+		{
+		alert("¡Hola! Soy José Miguel, y bienvenido a este pequeño proyecto de código abierto de encriptación de mensajes, aquí encontrarás un poco de información que te puede ser útil a la hora de usar el programa.\nAntes de empezar, quiero dejar claro un par de cosas:\n-Por mi parte queda totalmente prohibido cualquier intento de vender o hacer dinero con este programa, este software es libre.\n-Cualquiera tiene derecho a modificar y mejorar este programa.\n-No me hago responsable por el uso que cualquier individuo le dé a este programa.\n-Esto es algo meramente experimental así que no es necesario tomárselo muy en serio.\n-Cualquier duda me puedes enviar un mensaje a mi correo: urux11@gmail.com, o a mi WhatsApp: 099 562 8213\nSabiendo todo esto, dale el uso que tú quieras a este programa ;).");
+		}
+		alert("¡Hola! Soy José Miguel, y bienvenido a este pequeño proyecto de código abierto de encriptación de mensajes, aquí encontrarás un poco de información que te puede ser útil a la hora de usar el programa.\nAntes de empezar, quiero dejar claro un par de cosas:\n-Por mi parte queda totalmente prohibido cualquier intento de vender o hacer dinero con este programa, este software es libre.\n-Cualquiera tiene derecho a modificar y mejorar este programa.\n-No me hago responsable por el uso que cualquier individuo le dé a este programa.\n-Esto es algo meramente experimental así que no es necesario tomárselo muy en serio.\n-Cualquier duda me puedes enviar un mensaje a mi correo: urux11@gmail.com, o a mi WhatsApp: 099 562 8213\nSabiendo todo esto, dale el uso que tú quieras a este programa ;).");
+
+		var textoresultado = document.getElementById("textoresultado");
+
+function encriptar()
+{
+	var textoadecriptar = document.getElementById("cajaadecriptar").value;
+	var textoseparado = textoadecriptar.split("");
+	var stringnuevo = "";
+	for(i = 0; i < textoseparado.length; i++)
+	{
+		var wachina = textoseparado[i];
+		switch (wachina.toLowerCase())
+		{
+			case "a":
+				stringnuevo += "z"
+			break;
+			case "b":
+				stringnuevo += "y"
+			break;
+			case "c":
+				stringnuevo += "x"
+			break;
+			case "d":
+				stringnuevo += "w"
+			break;
+			case "e":
+				stringnuevo += "v"
+			break;
+			case "f":
+				stringnuevo += "u"
+			break;
+			case "g":
+				stringnuevo += "t"
+			break;
+			case "h":
+				stringnuevo += "s"
+			break;
+			case "i":
+				stringnuevo += "r"
+			break;
+			case "j":
+				stringnuevo += "q"
+			break;
+			case "k":
+				stringnuevo += "p"
+			break;
+			case "l":
+				stringnuevo += "o"
+			break;
+			case "m":
+				stringnuevo += "ñ"
+			break;
+			case "n":
+				stringnuevo += "n"
+			break;
+			case "ñ":
+				stringnuevo += "m"
+			break;
+			case "o":
+				stringnuevo += "l"
+			break;
+			case "p":
+				stringnuevo += "k"
+			break;
+			case "q":
+				stringnuevo += "j"
+			break;
+			case "r":
+				stringnuevo += "i"
+			break;
+			case "s":
+				stringnuevo += "h"
+			break;
+			case "t":
+				stringnuevo += "g"
+			break;
+			case "u":
+				stringnuevo += "f"
+			break;
+			case "v":
+				stringnuevo += "e"
+			break;
+			case "w":
+				stringnuevo += "d"
+			break;
+			case "x":
+				stringnuevo += "c"
+			break;
+			case "y":
+				stringnuevo += "b"
+			break;
+			case "z":
+				stringnuevo += "a"
+			break;
+			case " ":
+				stringnuevo += " ";
+			break;
+			case "1":
+				stringnuevo += "0";
+			break;
+			case "2":
+				stringnuevo += "9";
+			break;
+			case "3":
+				stringnuevo += "8";
+			break;
+			case "4":
+				stringnuevo += "7";
+			break;
+			case "5":
+				stringnuevo += "6";
+			break;
+			case "6":
+				stringnuevo += "5";
+			break;
+			case "7":
+				stringnuevo += "4";
+			break;
+			case "8":
+				stringnuevo += "3";
+			break;
+			case "9":
+				stringnuevo += "2";
+			break;
+			case "0":
+				stringnuevo += "1";
+			break;
+		}
+	}
+	textoresultado.innerText = stringnuevo;
+}
+
+document.addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+        encriptar();
+    }
+});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>Hecho Por José Miguel</title>
+</head>
+<body>
+	<style>
+
+
+		.content {
+  			position: absolute;
+  			top: 30%;
+  			left: 25%;
+  			width: 50%;
+  			text-align: center;
+		}
+
+		p{
+			position:absolute;
+			bottom:15%;
+			top: 40%;
+			text-align: center;
+			right: 20%;
+  			width: 60%;
+		}
+		#botondecriptar{
+			background-color: #f44336;
+  			border: none;
+  			color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 24px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+		}
+		#informacion{
+			position: absolute;
+			top: 0%;
+			right: 0;
+			background-color: #008CBA;
+  			border: none;
+  			color: white;
+  			padding: 15px 32px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 24px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+		}
+
+		#faq{
+			position: absolute;
+			top: 0%;
+			left: 0;
+			background-color: #008CBA;
+  			border: none;
+  			color: white;
+  			padding: 15px 32px;
+	  		text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			font-size: 24px;
+  			margin: 4px 2px;
+  			cursor: pointer;
+		}
+		
+		#cajaadecriptar{
+			height:50px;
+    		font-size:22pt;
+    		background-color: #3CBC8D;
+ 			color: black;
+		}
+		#textoresultado{
+			font-family: Century Gothic;
+			font-size:16pt;
+		}
+	</style>
+	<button id="informacion" onclick="alertinfo()">Información</button>
+	<button id="faq" onclick="mostrarfaq()">Preguntas Frecuentes</button>
+	<div class="content">
+	<input type="text" id="cajaadecriptar"></input>
+	<button id="botondecriptar" onclick="encriptar()">Encriptar</button>
+	</div>
+	<p id="textoresultado"></p>
+	<script>
+		function alertinfo()
+		{
+		alert("¡Hola! Soy José Miguel, y bienvenido a este pequeño proyecto de código abierto de encriptación de mensajes, aquí encontrarás un poco de información que te puede ser útil a la hora de usar el programa.\nAntes de empezar, quiero dejar claro un par de cosas:\n-Por mi parte queda totalmente prohibido cualquier intento de vender o hacer dinero con este programa, este software es libre.\n-Cualquiera tiene derecho a modificar y mejorar este programa.\n-No me hago responsable por el uso que cualquier individuo le dé a este programa.\n-Esto es algo meramente experimental así que no es necesario tomárselo muy en serio.\n-Cualquier duda me puedes enviar un mensaje a mi correo: urux11@gmail.com, o a mi WhatsApp: 099 562 8213\nSabiendo todo esto, dale el uso que tú quieras a este programa ;).");
+		}
+		function mostrarfaq()
+		{
+			alert("Preguntas Frecuentes:\n-¿Cómo sé que no es un virus?:\nEl código fuente de este programa lo puede ver cualquiera con un editor de texto, ahí puedes ver todas las entrañas de este programa y verás que no hay una sola línea de código con fines maliciosos.\n-¿Cómo sé que no puedes ver todo lo que escribo?:\nEste programa no tiene de ninguna manera conexión a Internet, es un simple archivo que se ejecuta, míralo más como un documento de Microsoft Word o Excel, es algo que lee la computadora, y, como en la pregunta anterior, también puedes ver en el código fuente que no tiene nada que sea con fines maliciosos.\n-Encontré esto en la computadora de mi hij@, ¿Qué es esto y para qué sirve?:\nEste es un programa sencillo que sirve para cambiar el texto de un mensaje, enviarlo, y que la otra persona agarre ese texto, lo ejecute en este mismo programa y pueda ver el mensaje original.\n-Mi computadora está lenta, ¿es por culpa de este programa?:\nEste programa es más liviano que un documento de Microsoft Word y usa menos potencia que un video de YouTube, por lo tanto, este programa no tiene absolutamente ningún impacto en el rendimiento de ninguna computadora y no hace ningún daño.\n-Algo en este programa no funciona como debería, ¿Qué hago?:\nMira la casilla de Información que está en la esquina superior izquierda y busca mis contactos, me puedes contactar por correo electrónico o por mi WhatsApp para hacerme saber cualquier mal funcionamiento de este programa, intentaré arreglarlo lo antes posible.\nEso concluye la casilla de preguntas frecuentes que nadie ha hecho aún, pero que seguramente alguien en algún momento se lo preguntará, si tienes alguna otra duda, me puedes contactar por los medios que salen en la casilla de Información ;).")
+		}
+
+		var textoresultado = document.getElementById("textoresultado");
+		var caracteres = ["!", "=", "¿", "?", "(", ")", "J", "H", "K", "L", "w", "n", "&", "Z", "X", '"', "'", "¡", "e", "b", "r", "v", "t", "c", "y", "x", "u", "z", "i", "Q", "W", ";", ",", ":", ".", "U", "I", "1", "2", "3", "4", "B", "N", "8", "7", "9", "0", "|", "@", "O", "P", "A", "¨", "{", "F", "G", "/", "%", "q", "m", "Ñ", "$", "·", "C", "V", "5", "6", "M", "#","¬", "º", "ª", "^", "`", "[", "*", "+", "]", "´", "S", "D", "ç", "}", "E", "R", "T", "Y", "_", "-", "<", ">", "o", "p", "a", "s","d", "f", "g", "h", "j", "k", "l", "ñ", " ", "á", "é", "í", "ó", "ú"];
+		var jesucristo = ["!", "=", "¿", "?", "(", ")", "J", "H", "K", "L", "w", "n", "&", "Z", "X", '"', "'", "¡", "e", "b", "r", "v", "t", "c", "y", "x", "u", "z", "i", "Q", "W", ";", ",", ":", ".", "U", "I", "1", "2", "3", "4", "B", "N", "8", "7", "9", "0", "|", "@", "O", "P", "A", "¨", "{", "F", "G", "/", "%", "q", "m", "Ñ", "$", "·", "C", "V", "5", "6", "M", "#","¬", "º", "ª", "^", "`", "[", "*", "+", "]", "´", "S", "D", "ç", "}", "E", "R", "T", "Y", "_", "-", "<", ">", "o", "p", "a", "s","d", "f", "g", "h", "j", "k", "l", "ñ", " ", "á", "é", "í", "ó", "ú"];
+		var caracteresitos = jesucristo.reverse();
+
+function encriptar()
+{
+	var textoadecriptar = document.getElementById("cajaadecriptar").value;
+	var textoseparado = textoadecriptar.split("");
+	var stringnuevo = "";
+	for(i = 0; i < textoseparado.length; i++)
+	{
+		var wachina = textoseparado[i];
+		let patata = caracteres[caracteresitos.indexOf(wachina)];
+		stringnuevo += patata;
+	}
+	textoresultado.innerText = stringnuevo;
+}
+
+document.addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+        encriptar();
+    }
+});
+	</script>
+
+</body>
+</html>
